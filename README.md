@@ -1,96 +1,206 @@
-# Abhishek Anand — Portfolio (Vite + React + TypeScript)
+<div align="center">
 
-A modern, dark-themed developer portfolio built with **Vite + React 18 + TypeScript**.
+# 🚀 Abhishek Anand — Developer Portfolio
 
-## Tech Stack
+### Frontend Developer · React · React Native · TypeScript · Enterprise UI
 
-| Layer      | Choice                        |
-|------------|-------------------------------|
-| Build tool | **Vite 5** (replaces CRA)     |
-| Framework  | React 18                      |
-| Language   | TypeScript (strict mode)      |
-| Styling    | Plain CSS (per-component)     |
-| Fonts      | Syne · DM Sans · JetBrains Mono |
+[![React](https://img.shields.io/badge/React-18-61DAFB?style=for-the-badge&logo=react&logoColor=black)](https://reactjs.org/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-5.0-3178C6?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![Vite](https://img.shields.io/badge/Vite-5.0-646CFF?style=for-the-badge&logo=vite&logoColor=white)](https://vitejs.dev/)
+[![Deploy](https://img.shields.io/badge/Deploy-Vercel-000000?style=for-the-badge&logo=vercel&logoColor=white)](https://vercel.com/)
 
-## CRA vs Vite — why Vite?
+<br />
 
-| | CRA | **Vite** |
-|---|---|---|
-| Dev server start | ~10s | **< 1s** |
-| Hot reload | Slow | **Instant** |
-| Build speed | Slow (Webpack) | **Fast (Rollup)** |
-| Maintained | ❌ Deprecated | ✅ Active |
+**[🌐 Live Demo](https://abhishek-anand-portfolio.vercel.app)** &nbsp;·&nbsp;
+**[📧 Contact Me](mailto:abhishekanand864@gmail.com)** &nbsp;·&nbsp;
+**[💼 LinkedIn](https://www.linkedin.com/in/abhishek-anand-b59236172)**
 
-## Getting Started
+<br />
+
+> A modern, dark-themed developer portfolio with animated UI, scroll reveal effects,
+> real-time skill bars, and a fully typed React + TypeScript codebase.
+
+</div>
+
+---
+
+## ✨ Features
+
+- 🎨 &nbsp;**Dark editorial design** — emerald green accents, Syne + JetBrains Mono fonts
+- 🖱️ &nbsp;**Custom animated cursor** with smooth lag ring effect
+- 📜 &nbsp;**Scroll reveal animations** on every section using IntersectionObserver
+- 📊 &nbsp;**Animated skill bars** triggered on scroll into view
+- 📱 &nbsp;**Fully responsive** — mobile hamburger nav, fluid layouts
+- ⚡ &nbsp;**Vite 5** — dev server starts in under 1 second
+- 🔒 &nbsp;**TypeScript strict mode** — fully typed components, props, and data
+- 🗂️ &nbsp;**One data file** — update all content from `src/data/portfolioData.ts`
+
+---
+
+## 🛠️ Tech Stack
+
+| Category | Technology |
+|---|---|
+| ⚡ Build Tool | Vite 5 |
+| ⚛️ Framework | React 18 |
+| 🔷 Language | TypeScript 5 (strict) |
+| 🎨 Styling | Plain CSS (per-component) |
+| 🔤 Fonts | Syne · DM Sans · JetBrains Mono |
+| 🚀 Deployment | Vercel |
+
+---
+
+## 📁 Project Structure
+
+```
+abhishek-portfolio-vite/
+│
+├── index.html                 ← Root HTML (Vite — lives at root, not public/)
+├── vite.config.ts             ← Vite configuration
+├── tsconfig.json              ← TypeScript config
+├── tsconfig.node.json         ← TS config for vite.config.ts
+├── package.json
+│
+└── src/
+    ├── main.tsx               ← App entry point
+    ├── App.tsx                ← Root component
+    ├── vite-env.d.ts          ← Vite type declarations
+    │
+    ├── types/
+    │   └── index.ts           ← All shared TypeScript interfaces
+    │
+    ├── data/
+    │   └── portfolioData.ts   ← ✏️ Edit ALL your content here
+    │
+    ├── styles/
+    │   └── global.css         ← CSS variables + base styles
+    │
+    └── components/
+        ├── useScrollReveal.ts ← IntersectionObserver scroll hook
+        ├── Cursor.tsx         ← Animated custom cursor
+        ├── Navbar.tsx         ← Fixed nav + mobile menu
+        ├── Hero.tsx           ← Landing hero section
+        ├── About.tsx          ← About me + cards
+        ├── Skills.tsx         ← Animated skill bars
+        ├── Experience.tsx     ← Work experience timeline
+        ├── Projects.tsx       ← Project cards grid
+        ├── Contact.tsx        ← Contact links + CTA
+        └── Footer.tsx         ← Footer
+```
+
+---
+
+## 🚀 Getting Started
+
+### 1 · Clone the repo
 
 ```bash
-# 1. Unzip and enter folder
-unzip abhishek-portfolio-vite.zip
-cd abhishek-portfolio-vite
+git clone https://github.com/itsmeabhishub/abhishek-anand-portfolio.git
+cd abhishek-anand-portfolio
+```
 
-# 2. Install dependencies
+### 2 · Install dependencies
+
+```bash
 npm install
+```
 
-# 3. Start dev server
+### 3 · Start the dev server
+
+```bash
 npm run dev
-# → http://localhost:3000  (opens automatically)
 ```
 
-## Other commands
+Open **[http://localhost:3000](http://localhost:3000)** — starts in under 1 second ⚡
+
+---
+
+## 📜 Available Scripts
 
 ```bash
-npm run build       # Production build → dist/
-npm run preview     # Preview production build locally
-npm run type-check  # TypeScript check only (no build)
+npm run dev          # Start development server (localhost:3000)
+npm run build        # Production build → dist/
+npm run preview      # Preview the production build locally
+npm run type-check   # Run TypeScript checks without building
 ```
 
-## Deploy to Vercel (free, recommended)
+---
 
+## ✏️ Customising Your Content
+
+All personal content lives in **one single typed file**:
+
+```
+src/data/portfolioData.ts
+```
+
+Open it and update:
+
+```ts
+export const personalInfo = {
+  name: "Your Name",
+  email: "your@email.com",
+  linkedin: "https://linkedin.com/in/yourprofile",
+  github: "https://github.com/yourusername",
+  // ...
+};
+```
+
+That's it — the entire site updates automatically. No need to touch any component files.
+
+---
+
+## 🌍 Deploy to Vercel
+
+**Option A — Drag and Drop**
 ```bash
-npm run build
-# Drag the dist/ folder to vercel.com
-# OR install Vercel CLI:
+npm run build     # creates dist/ folder
+# Drag dist/ to vercel.com/new
+```
+
+**Option B — Vercel CLI**
+```bash
 npm i -g vercel
 vercel --prod
 ```
 
-## Customise your content
+**Option C — Connect GitHub repo**
+1. Push to GitHub
+2. Go to [vercel.com/new](https://vercel.com/new)
+3. Import your repo → auto-deploys on every push ✅
 
-Everything lives in one typed file:
+---
 
-```
-src/data/portfolioData.ts   ← edit name, email, skills, projects, experience
-src/types/index.ts          ← TypeScript interfaces (only change if you add new fields)
-```
+## ⚡ Vite vs CRA
 
-## Project Structure
+| | Create React App | **Vite (used here)** |
+|---|---|---|
+| Dev server start | ~10 seconds | **< 1 second** |
+| Hot Module Reload | Slow | **Instant** |
+| Build speed | Slow (Webpack) | **Fast (Rollup)** |
+| Actively maintained | ❌ Deprecated | ✅ Yes |
+| Config file | Hidden | **Transparent** (`vite.config.ts`) |
 
-```
-abhishek-portfolio-vite/
-├── index.html                  ← Root HTML (Vite standard — at root, not public/)
-├── vite.config.ts              ← Vite config
-├── tsconfig.json               ← TypeScript config
-├── tsconfig.node.json          ← TS config for vite.config.ts
-├── package.json
-└── src/
-    ├── main.tsx                ← Entry point (Vite uses main.tsx not index.tsx)
-    ├── App.tsx
-    ├── vite-env.d.ts           ← Vite type reference
-    ├── types/
-    │   └── index.ts            ← All TypeScript interfaces
-    ├── data/
-    │   └── portfolioData.ts    ← ✏️  All your content here
-    ├── styles/
-    │   └── global.css
-    └── components/
-        ├── useScrollReveal.ts
-        ├── Cursor.tsx / .css
-        ├── Navbar.tsx / .css
-        ├── Hero.tsx   / .css
-        ├── About.tsx  / .css
-        ├── Skills.tsx / .css
-        ├── Experience.tsx / .css
-        ├── Projects.tsx   / .css
-        ├── Contact.tsx    / .css
-        └── Footer.tsx     / .css
-```
+---
+
+## 📬 Contact
+
+<div align="center">
+
+| Platform | Link |
+|---|---|
+| 📧 Email | [abhishekanand864@gmail.com](mailto:abhishekanand8544@gmail.com) |
+| 💼 LinkedIn | [linkedin.com/in/abhishek-anand-b59236172](https://www.linkedin.com/in/abhishek-anand-b59236172) |
+| 🐙 GitHub | [github.com/itsmeabhishub](https://github.com/itsmeabhishub) |
+
+</div>
+
+---
+
+<div align="center">
+
+Made with ❤️ by **Abhishek Anand**
+
+⭐ Star this repo if you found it useful!
+
+</div>
