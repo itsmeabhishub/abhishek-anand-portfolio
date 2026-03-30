@@ -1,0 +1,166 @@
+.exp-layout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 60px;
+}
+
+.exp-sidebar {
+  position: sticky;
+  top: 100px;
+  align-self: start;
+}
+
+.exp-company {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 8px;
+  letter-spacing: -1px;
+}
+
+.exp-period {
+  font-family: var(--font-mono);
+  font-size: 12px;
+  color: var(--green);
+  margin-bottom: 14px;
+}
+
+.exp-role-badge {
+  display: inline-block;
+  background: var(--green-faint);
+  border: 1px solid var(--border-green);
+  padding: 6px 14px;
+  border-radius: 6px;
+  font-size: 13px;
+  color: var(--green);
+  margin-bottom: 16px;
+  font-family: var(--font-mono);
+}
+
+.exp-location {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-faint);
+  margin-bottom: 16px;
+}
+
+.exp-summary {
+  font-size: 14px;
+  color: var(--text-dim);
+  line-height: 1.7;
+}
+
+/* Main */
+.exp-block {
+  margin-bottom: 40px;
+}
+
+.exp-block-title {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  color: var(--text-faint);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+}
+
+/* Device Cards */
+.device-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 12px;
+}
+
+.device-card {
+  background: var(--bg3);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  padding: 20px;
+  text-align: center;
+  transition: all 0.25s;
+}
+
+.device-card:hover {
+  border-color: var(--border-green);
+  transform: translateY(-3px);
+}
+
+.device-icon { font-size: 28px; margin-bottom: 10px; }
+
+.device-name {
+  font-family: var(--font-display);
+  font-size: 14px;
+  font-weight: 700;
+  margin-bottom: 6px;
+  color: var(--text);
+}
+
+.device-desc {
+  font-size: 12px;
+  color: var(--text-dim);
+  line-height: 1.5;
+}
+
+/* Contribution items */
+.exp-item {
+  display: flex;
+  gap: 16px;
+  padding: 16px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  margin-bottom: 10px;
+  transition: border-color 0.25s, background 0.25s;
+}
+
+.exp-item:hover {
+  border-color: var(--border-green);
+  background: var(--bg3);
+}
+
+.exp-item-dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--green);
+  flex-shrink: 0;
+  margin-top: 6px;
+}
+
+.exp-item-text {
+  font-size: 14px;
+  color: var(--text-dim);
+  line-height: 1.7;
+}
+
+.exp-item-text strong {
+  color: var(--text);
+  font-weight: 500;
+}
+
+/* Tech Pills */
+.tech-pills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.tech-pill {
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 5px 12px;
+  background: var(--green-faint2);
+  border: 1px solid var(--border-green);
+  border-radius: 4px;
+  color: var(--green-dim);
+}
+
+@media (max-width: 900px) {
+  .exp-layout {
+    grid-template-columns: 1fr;
+    gap: 40px;
+  }
+  .exp-sidebar { position: static; }
+  .device-cards { grid-template-columns: 1fr; }
+}
